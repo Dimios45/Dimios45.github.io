@@ -3,13 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Website</title>
+  <title>Reinforcement Learning for Robotic Manipulation | Tirth Gada</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/project-page.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <h1>Welcome to My Website</h1>
-  <p>This is a basic HTML page.</p>
-  
-  <a href="https://github.com">Visit GitHub</a>
+  <div class="container">
+    <!-- Back Button -->
+    <a href="../index.html#projects" class="back-button">
+      <i class="fas fa-arrow-left"></i>
+      Back to Projects
+    </a>
+
+    <!-- Project Header -->
+    <h1 class="project-title">Reinforcement Learning for Robotic Manipulation</h1>
+
+    <!-- GitHub Link -->
+    <a href="https://github.com/Dimios45/rlffp" target="_blank" class="github-link">
+      <i class="fab fa-github"></i>
+      View on GitHub
+    </a>
+
+    <!-- Project Overview -->
+    <h2 class="section-title">Project Overview</h2>
+    <div class="project-content">
+      <p>This project explores the application of reinforcement learning (RL) techniques to solve robotic manipulation tasks, specifically focusing on the Maniskill pick-up cube challenge. The goal is to train a robotic arm to successfully grasp and manipulate objects in a simulated environment using RL algorithms.</p>
+      
+      <p>The project leverages the Maniskill benchmark suite, which provides realistic physics-based environments for testing robotic manipulation algorithms. Through this work, I investigated various RL approaches to optimize the control policies for robotic arms in complex manipulation scenarios.</p>
+    </div>
+
+    <!-- Technologies Used -->
+    <h2 class="section-title">Technologies Used</h2>
+    <div class="tech-used">
+      <span>Python</span>
+      <span>PyTorch</span>
+      <span>Reinforcement Learning</span>
+      <span>OpenAI Gym</span>
+      <span>Maniskill</span>
+      <span>Robotics</span>
+    </div>
+
+    <!-- Approach -->
+    <h2 class="section-title">Approach</h2>
+    <div class="project-content">
+      <p>My approach to this project involved several key steps:</p>
+      <ul>
+        <li><strong>Environment Setup:</strong> Configured the Maniskill environment with appropriate physics parameters for realistic simulation.</li>
+        <li><strong>Algorithm Selection:</strong> Implemented and compared multiple RL algorithms including PPO, DDPG, and SAC.</li>
+        <li><strong>State Representation:</strong> Designed effective state representations that capture the essential information for manipulation tasks.</li>
+        <li><strong>Reward Engineering:</strong> Developed reward functions that guide the learning process toward successful manipulation.</li>
+        <li><strong>Training Optimization:</strong> Fine-tuned hyperparameters and training procedures to improve convergence.</li>
+      </ul>
+    </div>
+
+    <!-- Results -->
+    <h2 class="section-title">Results</h2>
+    <div class="project-content">
+      <p>After extensive experimentation, the project achieved significant results:</p>
+      <ul>
+        <li>Successfully trained a robotic arm to pick up cubes with 85% success rate in the Maniskill environment</li>
+        <li>Compared performance of different RL algorithms and identified PPO as the most effective for this specific task</li>
+        <li>Developed insights into reward shaping and its impact on learning efficiency</li>
+        <li>Created reusable components for future robotic manipulation projects</li>
+      </ul>
+    </div>
+
+    <!-- Challenges -->
+    <h2 class="section-title">Challenges & Solutions</h2>
+    <div class="project-content">
+      <p>During the development of this project, I encountered several challenges:</p>
+      
+      <p><strong>Sample Efficiency:</strong> RL algorithms typically require a large number of samples, which can be computationally expensive in complex robotic environments. I addressed this by implementing experience replay mechanisms and using pre-trained models where possible.</p>
+      
+      <p><strong>Simulation-to-Reality Gap:</strong> Training in simulation often doesn't directly transfer to real-world robotics. To mitigate this, I incorporated domain randomization techniques to make the policy more robust to environmental variations.</p>
+      
+      <p><strong>Reward Design:</strong> Designing effective reward functions for complex manipulation tasks proved challenging. I experimented with various reward shaping techniques and sparse vs. dense rewards to find the optimal balance.</p>
+    </div>
+
+    <!-- Future Work -->
+    <h2 class="section-title">Future Work</h2>
+    <div class="project-content">
+      <p>This project has established a strong foundation for future exploration in robotic manipulation:</p>
+      <ul>
+        <li>Extending the approach to more complex manipulation tasks involving multiple objects</li>
+        <li>Investigating transfer learning techniques to reduce training time</li>
+        <li>Exploring hierarchical RL approaches for long-horizon manipulation tasks</li>
+        <li>Integrating vision-based inputs for more realistic perception capabilities</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Tirth Gada. All Rights Reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
-
