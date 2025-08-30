@@ -3,104 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reinforcement Learning for Robotic Manipulation | Tirth Gada</title>
-  <link rel="stylesheet" href="../style.css">
+  <title>RLFFP — Robot Learning From First Principles</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Styles -->
   <link rel="stylesheet" href="../css/project-page.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-<body class="project-page">
+<body>
   <div class="container">
     <!-- Back Button -->
-    <a href="../index.html#projects" class="back-button">
-      <i class="fas fa-arrow-left"></i>
-      Back to Projects
-    </a>
+    <a href="../index.html" class="back-button"><i class="fas fa-arrow-left"></i> Home</a>
 
-    <!-- Project Header -->
-    <h1 class="project-title">Reinforcement Learning for Robotic Manipulation</h1>
+    <!-- Hero Section -->
+    <header class="hero">
+      <h1 class="project-title">🤖 RLFFP — Robot Learning from First Principles</h1>
+      <p class="subtitle">From simulation to reality: teaching a robot arm to pick, think, and adapt.</p>
+      <a href="https://github.com/Dimios45/rlffp" class="github-link" target="_blank">
+        <i class="fab fa-github"></i> Explore on GitHub
+      </a>
+    </header>
 
-    <!-- GitHub Link -->
-    <a href="https://github.com/Dimios45/rlffp" target="_blank" class="github-link">
-      <i class="fab fa-github"></i>
-      View on GitHub
-    </a>
+    <!-- Overview -->
+    <section class="project-content">
+      <h2 class="section-title">✨ What’s This Project About?</h2>
+      <p>
+        RLFFP is an exploration into the <strong>future of robot learning</strong>.  
+        Imagine training a robot in a <em>virtual world</em> and then dropping that same brain into a <em>real robot arm</em>—seamlessly.  
+        That’s what this project is all about: <strong>bridging the gap between simulation and reality</strong> while pushing the limits of reinforcement learning.
+      </p>
+    </section>
 
-    <!-- Project Overview -->
-    <h2 class="section-title">Project Overview</h2>
-    <div class="project-content">
-      <p>This project explores the application of reinforcement learning (RL) techniques to solve robotic manipulation tasks, specifically focusing on the Maniskill pick-up cube challenge. The goal is to train a robotic arm to successfully grasp and manipulate objects in a simulated environment using RL algorithms.</p>
-      
-      <p>The project leverages the Maniskill benchmark suite, which provides realistic physics-based environments for testing robotic manipulation algorithms. Through this work, I investigated various RL approaches to optimize the control policies for robotic arms in complex manipulation scenarios.</p>
-    </div>
 
-    <!-- Technologies Used -->
-    <h2 class="section-title">Technologies Used</h2>
-    <div class="tech-used">
-      <span>Python</span>
-      <span>PyTorch</span>
-      <span>Reinforcement Learning</span>
-      <span>OpenAI Gym</span>
-      <span>Maniskill</span>
-      <span>Robotics</span>
-    </div>
 
-    <!-- Approach -->
-    <h2 class="section-title">Approach</h2>
-    <div class="project-content">
-      <p>My approach to this project involved several key steps:</p>
+ 
+
+    <!-- Sim-to-Real -->
+    <section class="project-content">
+      <h2 class="section-title">🌍 From Sim to Reality</h2>
+      <p>
+        Training in simulation is easy.  
+        Making it <em>work in the real world</em> is where things get tricky.  
+      </p>
       <ul>
-        <li><strong>Environment Setup:</strong> Configured the Maniskill environment with appropriate physics parameters for realistic simulation.</li>
-        <li><strong>Algorithm Selection:</strong> Implemented and compared multiple RL algorithms including PPO, DDPG, and SAC.</li>
-        <li><strong>State Representation:</strong> Designed effective state representations that capture the essential information for manipulation tasks.</li>
-        <li><strong>Reward Engineering:</strong> Developed reward functions that guide the learning process toward successful manipulation.</li>
-        <li><strong>Training Optimization:</strong> Fine-tuned hyperparameters and training procedures to improve convergence.</li>
+        <li>📷 <strong>Camera alignment</strong> had to be near perfect.</li>
+        <li>👁️ Visual perception didn’t always match between sim & real.</li>
+        <li>⚙️ Hardware calibration kept us on our toes.</li>
       </ul>
-    </div>
+      <p>
+        Tackling these challenges gave us insights into what it really takes to bridge two worlds.  
+        <em>(Spoiler: it’s harder than it looks!)</em>
+      </p>
+    </section>
+
+    <!-- Gallery -->
+    <section>
+      <h2 class="section-title">📸 Project Gallery</h2>
+      <div class="video-container">
+        <img src="../assets/rlffp/ppo_simulation.gif" alt="Simulation View" class="project-image">
+        <p class="image-caption">The SO100 arm tackling the PickCube task in MuJoCo simulation.</p>
+      </div>
+      <div class="image-container">
+        <img src="../assets/rlffp/ppo_sim2real.gif" alt="Real Arm Operation" class="project-image">
+        <p class="image-caption">The same policy transferred to real hardware — picking cubes in the physical world.</p>
+      </div>
+    </section>
 
     <!-- Results -->
-    <h2 class="section-title">Results</h2>
-    <div class="project-content">
-      <p>After extensive experimentation, the project achieved significant results:</p>
+    <section class="project-content">
+      <h2 class="section-title">📊 Results & Insights</h2>
+      <p>
+        PPO gave us solid baselines.
+      </p>
+      <div class="image-container">
+        <img src="../assets/rlffp/ppo_evalrewards.png" alt="PPO Evaluation Rewards" class="project-image">
+        <p class="image-caption">Evaluation rewards during PPO training showing consistent improvement.</p>
+      </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="project-content">
+      <h2 class="section-title">⚙️ Under the Hood</h2>
       <ul>
-        <li>Successfully trained a robotic arm to pick up cubes with 85% success rate in the Maniskill environment</li>
-        <li>Compared performance of different RL algorithms and identified PPO as the most effective for this specific task</li>
-        <li>Developed insights into reward shaping and its impact on learning efficiency</li>
-        <li>Created reusable components for future robotic manipulation projects</li>
+        <li>Simulation: <strong>Maniskill</strong></li>
+        <li>Hardware Bridge: <strong>LeRobot Interface</strong></li>
+        <li>Algorithms: <strong>PPO, FPO</strong></li>
+        <li>Task: <strong>PickCube (sim & real execution)</strong></li>
       </ul>
-    </div>
+    </section>
+
+    <!-- Technologies Used -->
+    <section>
+      <h2 class="section-title">🧰 Tech Stack</h2>
+      <div class="tech-used">
+       
+        <span>Python</span>
+        <span>PyTorch</span>
+        <span>Maniskill</span>
+        <span>Reinforcement Learning</span>
+        <span>Flow-based Models</span>
+        <span>LeRobot</span>
+      </div>
+    </section>
 
     <!-- Challenges -->
-    <h2 class="section-title">Challenges & Solutions</h2>
-    <div class="project-content">
-      <p>During the development of this project, I encountered several challenges:</p>
-      
-      <p><strong>Sample Efficiency:</strong> RL algorithms typically require a large number of samples, which can be computationally expensive in complex robotic environments. I addressed this by implementing experience replay mechanisms and using pre-trained models where possible.</p>
-      
-      <p><strong>Simulation-to-Reality Gap:</strong> Training in simulation often doesn't directly transfer to real-world robotics. To mitigate this, I incorporated domain randomization techniques to make the policy more robust to environmental variations.</p>
-      
-      <p><strong>Reward Design:</strong> Designing effective reward functions for complex manipulation tasks proved challenging. I experimented with various reward shaping techniques and sparse vs. dense rewards to find the optimal balance.</p>
-    </div>
+    <section class="project-content">
+      <h2 class="section-title">🚧 Challenges & Breakthroughs</h2>
+      <p>
+        Sim-to-real transfer is notoriously unforgiving.  
+        But every calibration tweak, every visual mismatch, and every failed pick taught us something.  
+       
+      </p>
+    </section>
 
-    <!-- Future Work -->
-    <h2 class="section-title">Future Work</h2>
-    <div class="project-content">
-      <p>This project has established a strong foundation for future exploration in robotic manipulation:</p>
-      <ul>
-        <li>Extending the approach to more complex manipulation tasks involving multiple objects</li>
-        <li>Investigating transfer learning techniques to reduce training time</li>
-        <li>Exploring hierarchical RL approaches for long-horizon manipulation tasks</li>
-        <li>Integrating vision-based inputs for more realistic perception capabilities</li>
-      </ul>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Made with ❤️ and a lot of debugging</p>
+      <a href="../index.html" class="back-button"><i class="fas fa-home"></i> Back to Home</a>
+    </footer>
   </div>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>© 2025 Tirth Gada. All Rights Reserved.</p>
-    </div>
-  </footer>
 </body>
 </html>
+
