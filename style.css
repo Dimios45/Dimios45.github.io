@@ -230,6 +230,13 @@ body {
   text-decoration: none;
   box-shadow: 0 4px 10px rgba(0, 150, 136, 0.1);
   border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.social-links a img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
 }
 
 .social-links a:hover {
@@ -344,22 +351,21 @@ body {
   margin-bottom: 2rem;
   color: var(--primary-dark);
   font-size: 1.7rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
 }
 
-.skill-category h3 i {
-  color: var(--primary);
-  background: rgba(0, 150, 136, 0.1);
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-size: 1.8rem;
+.skill-category h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 3px;
 }
 
 .skill-items {
@@ -447,6 +453,21 @@ body {
 .media-container:hover {
   transform: rotate(15deg) scale(1.1);
   background: rgba(0, 150, 136, 0.2);
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.project-img:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-hover);
 }
 
 .project-card h3 {
@@ -566,7 +587,8 @@ body {
   background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
 }
 
-.contact-method i {
+.contact-method i,
+.contact-method img {
   font-size: 2.5rem;
   color: var(--primary);
   margin-bottom: 1.5rem;
@@ -580,9 +602,12 @@ body {
   border-radius: 50%;
   margin: 0 auto 1.5rem;
   transition: var(--transition);
+  object-fit: contain;
+  padding: 15px;
 }
 
-.contact-method:hover i {
+.contact-method:hover i,
+.contact-method:hover img {
   transform: scale(1.2) rotate(10deg);
   background: rgba(0, 150, 136, 0.2);
 }
