@@ -31,91 +31,44 @@
     <section class="project-content">
       <h2 class="section-title">🔬 What's This Project About?</h2>
       <p>
-        RLFFP is an exploration into the <strong>future of robot learning</strong>.  
-        Imagine training a robot in a <em>virtual world</em> and then deploying that same brain into a <em>real robot arm</em>—seamlessly.  
-        That's what this project is all about: <strong>bridging the gap between simulation and reality</strong> while pushing the limits of reinforcement learning.
+        Frontier research endeavour to implement Flow Policy Optimization (FPO) for sim2real zero-shot deployment, 
+        comparing its effectiveness against baseline Proximal Policy Optimization (PPO) for the challenging cube pickup task.
       </p>
     </section>
 
-    <!-- Sim-to-Real -->
-    <section class="project-content">
-      <h2 class="section-title">🌍 From Simulation to Reality</h2>
-      <p>
-        Training in simulation is straightforward.  
-        Making it <em>work in the real world</em> is where the real challenges emerge.  
-      </p>
-      <ul>
-        <li>⚙ <strong>Camera alignment</strong> had to be near perfect.</li>
-        <li>👁 Visual perception didn't always match between sim & real.</li>
-        <li>🔧 Hardware calibration kept us on our toes.</li>
-      </ul>
-      <p>
-        Tackling these challenges gave us insights into what it really takes to bridge two worlds.  
-        <em>(Spoiler: it's harder than it looks!)</em>
-      </p>
-    </section>
+
 
     <!-- Gallery -->
     <section>
       <h2 class="section-title">📸 Project Gallery</h2>
-      <div class="video-container">
-        <img src="../assets/rlffp/ppo_simulation.gif" alt="Simulation View" class="project-image">
-        <p class="image-caption">The SO100 arm tackling the PickCube task in MuJoCo simulation.</p>
-      </div>
-      <div class="image-container">
-        <img src="../assets/rlffp/ppo_sim2real.gif" alt="Real Arm Operation" class="project-image">
-        <p class="image-caption">The same policy transferred to real hardware — picking cubes in the physical world.</p>
-      </div>
-    </section>
-
-    <!-- Results -->
-    <section class="project-content">
-      <h2 class="section-title">📊 Results & Insights</h2>
-      <p>
-        PPO gave us solid baselines.
-      </p>
-      <div class="image-container">
-        <img src="../assets/rlffp/ppo_evalrewards.png" alt="PPO Evaluation Rewards" class="project-image">
-        <p class="image-caption">Evaluation rewards during PPO training showing consistent improvement.</p>
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <div class="video-container">
+            <img src="../assets/rlffp/ppo_simulation.gif" alt="Simulation View" class="project-image">
+            <p class="image-caption">The SO100 arm tackling the PickCube task in MuJoCo simulation.</p>
+          </div>
+          <div class="image-container">
+            <img src="../assets/rlffp/ppo_evalrewards.png" alt="PPO Evaluation Rewards" class="project-image">
+            <p class="image-caption">Evaluation rewards during PPO training showing consistent improvement.</p>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="../assets/rlffp/ppo_sim2real.gif" alt="Real Arm Operation" class="project-image">
+          <p class="image-caption">The same policy transferred to real hardware — picking cubes in the physical world.</p>
+        </div>
       </div>
     </section>
 
-    <!-- Technical Details -->
-    <section class="project-content">
-      <h2 class="section-title">⚙️ Under the Hood</h2>
-      <ul>
-        <li>Simulation: <strong>Maniskill</strong></li>
-        <li>Hardware Bridge: <strong>LeRobot Interface</strong></li>
-        <li>Algorithms: <strong>PPO, FPO</strong></li>
-        <li>Task: <strong>PickCube (sim & real execution)</strong></li>
-      </ul>
-    </section>
 
-    <!-- Technologies Used -->
-    <section>
-      <h2 class="section-title">🧰 Tech Stack</h2>
-      <div class="tech-used">
-        <span>Python</span>
-        <span>PyTorch</span>
-        <span>Maniskill</span>
-        <span>Reinforcement Learning</span>
-        <span>Flow-based Models</span>
-        <span>LeRobot</span>
-      </div>
-    </section>
 
-    <!-- Challenges -->
-    <section class="project-content">
-      <h2 class="section-title">🚧 Challenges & Breakthroughs</h2>
-      <p>
-        Sim-to-real transfer is notoriously unforgiving.  
-        But every calibration tweak, every visual mismatch, and every failed pick taught us something valuable.  
-      </p>
-    </section>
+
+
+
+
+
 
     <!-- Footer -->
     <footer class="footer">
-      <p>Made with ⚙️ and a lot of debugging</p>
       <a href="../index.html" class="back-button"><i class="fas fa-home"></i> Back to Home</a>
     </footer>
   </div>
