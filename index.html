@@ -3,127 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tirth Gada | Robotics Portfolio</title>
+  <title>Tirth Gada</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
-  <header class="container header">
-    <div class="profile-card">
-      <img src="assets/profile_picture.png" alt="Tirth Gada" class="profile-img">
-      <h1 class="name">Tirth Gada</h1>
-      <h3 class="tagline">Robotics & AI Engineer</h3>
-      <p class="bio">
-       busy chasing assymetric returns 
-      </p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/tirth-gada-3600b0314/" target="_blank" aria-label="LinkedIn"><img src="assets/home_page/linkedin.png" alt="LinkedIn"></a>
-        <a href="https://github.com/Dimios45" target="_blank" aria-label="GitHub"><img src="assets/home_page/github.png" alt="GitHub"></a>
-      </div>
-    </div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <div class="container">
+
+    <pre class="ascii-banner">
+████████╗██╗██████╗ ████████╗██╗  ██╗
+╚══██╔══╝██║██╔══██╗╚══██╔══╝██║  ██║
+   ██║   ██║██████╔╝   ██║   ███████║
+   ██║   ██║██╔══██╗   ██║   ██╔══██║
+   ██║   ██║██║  ██║   ██║   ██║  ██║
+   ╚═╝   ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝
+    </pre>
+
+    <nav class="nav">
+      <a href="#about">about</a>
+      <a href="#projects">projects</a>
+      <a href="#contact">contact</a>
     </nav>
-  </header>
 
-  <!-- About Section -->
-  <section id="about" class="section container">
-    <h2>About Me</h2>
-    <div class="narrow">
-      <p>
-        I am pursuing Electrical Engineering at VJTI, where my research interests lie at the intersection of Artificial Intelligence, Reinforcement Learning, and Robotics.
-      </p>
-    
-    </div>
-  </section>
+    <div class="divider"></div>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section container">
-    <h2>Featured Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="media-container">
-          <img src="assets/rlffp/ppo_simulation.gif" alt="RLFFP Simulation" class="project-img">
+    <section id="about" class="about">
+      <div class="about-content">
+        <div class="about-photo">
+          <img src="assets/home_page/profile_picture.png" alt="Tirth Gada">
         </div>
-        <h3>RLFFP — Robot Learning from First Principles</h3>
-        <p>
-          An exploration into the future of robot learning. Bridging the gap between simulation and reality while pushing the limits of reinforcement learning with the SO100 robotic arm.
-        </p>
-        <div class="tech-used">
-          <span>Reinforcement Learning</span>
-          <span>PyTorch</span>
-          <span>Maniskill3</span>
-          <span>LeRobot</span>
-        </div>
-        <a class="btn" href="projects/rlffp.html" target="_blank">View Project</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="section container">
-    <h2>Technical Skills</h2>
-    <div class="skills-container">
-      <div class="skill-category">
-        <h3>Programming & Tools</h3>
-        <div class="skill-items">
-          <span>Python</span>
-          <span>JAX</span>
-          <span>PyTorch</span>
-          <span>C++</span>
-          
+        <div class="about-text">
+          <h1>Tirth Gada</h1>
+          <p class="tagline">Electrical Engineering, VJTI Mumbai &mdash; 2nd Year</p>
+          <p class="bio">
+            Robot learning through reinforcement learning, sim2real transfer, and foundation models.
+            Experimenting and keeping pace with frontier robotics research.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/Dimios45" target="_blank" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://x.com/tirth_gada" target="_blank" aria-label="X / Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/tirth-gada-3600b0314/" target="_blank" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="mailto:tjgada_b24@ee.vjti.ac.in" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="skill-category">
-        <h3>AI & Robotics</h3>
-        <div class="skill-items">
-          <span>Reinforcement Learning</span>
-          <span>Robotics Simulation</span>
-          <span>Machine Learning</span>
-          <span>Computer Vision</span>
-          <span>Control Systems</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section container">
-    <h2>Get In Touch</h2>
-    <p class="centered-text">
-      Interested in robotics collaboration or discussing autonomous systems? Reach out and let's connect to build the future of intelligent machines.
-    </p>
-    <div class="contact-methods">
-      <div class="contact-method">
-        <img src="assets/home_page/email.png" alt="Email Icon">
-        <h3>Email</h3>
-        <a href="mailto:tjgada_b24@ee.vjti.ac.in">tjgada_b24@ee.vjti.ac.in</a>
-      </div>
-      <div class="contact-method">
-        <img src="assets/home_page/linkedin.png" alt="LinkedIn Icon">
-        <h3>LinkedIn</h3>
-        <a href="https://www.linkedin.com/in/tirth-gada-3600b0314/" target="_blank">linkedin.com/in/tirth-gada</a>
-      </div>
-      <div class="contact-method">
-        <img src="assets/home_page/github.png" alt="GitHub Icon">
-        <h3>GitHub</h3>
-        <a href="https://github.com/Dimios45" target="_blank">github.com/Dimios45</a>
-      </div>
-    </div>
-  </section>
+    <div class="divider"></div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>© 2025 Tirth Gada. All Rights Reserved. | Robotics & AI Engineer</p>
-    </div>
-  </footer>
+    <section id="projects">
+      <h2 class="section-heading">projects</h2>
+      <div class="project-grid">
+
+        <a href="projects/rlffp.html" class="project-card">
+          <div class="project-thumb">
+            <img src="assets/projects/rlffp/ppo_simulation.gif" alt="RLFFP">
+          </div>
+          <div class="project-info">
+            <h3>RLFFP</h3>
+            <p>Robot Learning from First Principles &mdash; bridging simulation and reality with RL on the SO100 arm.</p>
+            <div class="project-tags">
+              <span>RL</span>
+              <span>Sim2Real</span>
+              <span>ManiSkill3</span>
+            </div>
+            <div class="project-links">
+              <span class="link-pill" onclick="event.preventDefault(); window.open('https://github.com/Dimios45/rlffp', '_blank')">GitHub</span>
+              <span class="link-pill" onclick="event.preventDefault(); window.open('https://x.com/tirth_gada/status/2029903049175748733', '_blank')">Post</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="projects/ducky.html" class="project-card">
+          <div class="project-thumb">
+            <img src="assets/projects/ducky/duck.jpg" alt="Ducky">
+          </div>
+          <div class="project-info">
+            <h3>Ducky</h3>
+            <p>Sim2real bipedal locomotion &mdash; training walking policies in simulation and deploying on hardware.</p>
+            <div class="project-tags">
+              <span>Sim2Real</span>
+              <span>Locomotion</span>
+              <span>RL</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-card" href="projects/packsarm.html">
+          <div class="project-thumb">
+            <img src="assets/projects/packsarm/packsarm.png" alt="PackSARM">
+          </div>
+          <div class="project-info">
+            <h3>PackSARM</h3>
+            <p>Stage-aware reward modeling for ALOHA, ACT, and diffusion policies in manipulation tasks.</p>
+            <div class="project-tags">
+              <span>Reward Modeling</span>
+              <span>ACT</span>
+              <span>Diffusion</span>
+            </div>
+            <div class="project-links">
+              <span class="link-pill" onclick="event.preventDefault(); window.open('https://github.com/Dimios45/packsarm', '_blank')">GitHub</span>
+              <span class="link-pill" onclick="event.preventDefault(); window.open('https://x.com/tirth_gada/status/2027449660911288772', '_blank')">Post</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-card" href="projects/echolung.html">
+          <div class="project-thumb">
+            <img src="assets/projects/echolung/pocus_covid_sample.gif" alt="EchoLung">
+          </div>
+          <div class="project-info">
+            <h3>EchoLung</h3>
+            <p>Cross-anatomy transfer from heart to lung ultrasound data using JEPA architecture.</p>
+            <div class="project-tags">
+              <span>JEPA</span>
+              <span>Transfer Learning</span>
+              <span>Medical AI</span>
+            </div>
+            <div class="project-links">
+              <span class="link-pill" onclick="event.preventDefault(); window.open('https://github.com/Dimios45/echolung', '_blank')">GitHub</span>
+              <span class="link-pill" onclick="event.preventDefault(); window.open('https://x.com/tirth_gada/status/2034308520015716581', '_blank')">Post</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="contact" class="contact">
+      <h2 class="section-heading">get in touch</h2>
+      <p class="contact-text">interested in robotics, RL, or sim2real? let's talk.</p>
+      <div class="contact-row">
+        <a href="mailto:tjgada_b24@ee.vjti.ac.in" class="contact-chip">email</a>
+        <a href="https://github.com/Dimios45" target="_blank" class="contact-chip">github</a>
+        <a href="https://x.com/tirth_gada" target="_blank" class="contact-chip">x / twitter</a>
+        <a href="https://www.linkedin.com/in/tirth-gada-3600b0314/" target="_blank" class="contact-chip">linkedin</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="divider"></div>
+      <p>&copy; 2025 Tirth Gada</p>
+    </footer>
+
+  </div>
 </body>
 </html>

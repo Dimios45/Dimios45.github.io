@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PackSARM &mdash; Stage-Aware Reward Modeling</title>
+  <link rel="stylesheet" href="../css/project-page.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-button">&larr; Home</a>
+
+    <header class="hero">
+      <h1 class="project-title">PackSARM</h1>
+      <p class="subtitle">Stage-Aware Reward Modeling for Robot Manipulation</p>
+      <div class="hero-links">
+        <a href="https://github.com/Dimios45/packsarm" target="_blank" class="hero-link">GitHub</a>
+        <a href="https://x.com/tirth_gada/status/2027449660911288772" target="_blank" class="hero-link">Twitter Post</a>
+      </div>
+    </header>
+
+    <!-- Overview -->
+    <section class="project-content">
+      <h2 class="section-title">overview</h2>
+      <p>
+        Applied Stage-Aware Reward Models (SARM) and Reward-Aligned Behaviour Cloning (RA-BC)
+        to the ALOHA bimanual cube transfer task using ACT and DiffusionPolicy.
+        With just 50 expert demos and no environment reward, RA-BC gave DiffusionPolicy a
+        <strong>3&times; boost</strong> (8% &rarr; 24%) while ACT reached <strong>68% success</strong> on its own.
+      </p>
+    </section>
+
+    <!-- The Task -->
+    <section class="project-content">
+      <h2 class="section-title">the task</h2>
+      <p>
+        <strong>AlohaTransferCube-v0</strong> &mdash; a simulated bimanual robot (2 &times; 6-DOF arms, 14-DOF total)
+        picks up a cube with its right arm and hands it to the left arm. Trained on 50 human expert episodes
+        with RGB cameras + joint states. Success = cube held in left gripper at episode end.
+      </p>
+    </section>
+
+    <!-- The Idea -->
+    <section class="project-content">
+      <h2 class="section-title">the idea</h2>
+      <p>
+        Standard behaviour cloning treats every frame equally. But not all frames are equally useful &mdash;
+        some show real progress (grasping, lifting) while others are idle or transitioning.
+      </p>
+      <p>
+        <strong>SARM</strong> learns to score each frame by task progress (0 &rarr; 1), trained with GPT-4V labeling
+        5 subtask stages: approach, grasp, lift, transfer, release.
+        <strong>RA-BC</strong> then uses these scores to weight training samples &mdash; frames where the robot makes progress
+        get full weight, stagnant frames get downweighted.
+      </p>
+    </section>
+
+    <!-- Results -->
+    <section class="project-content">
+      <h2 class="section-title">results</h2>
+      <div class="results-table">
+        <table>
+          <thead>
+            <tr><th>Config</th><th>Steps</th><th>Success</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Vanilla DiffusionPolicy</td><td>10K</td><td>8%</td></tr>
+            <tr class="highlight"><td>RA-BC DiffusionPolicy</td><td>10K</td><td>24%</td></tr>
+            <tr><td>Vanilla ACT</td><td>80K</td><td>68%</td></tr>
+            <tr><td>RA-BC ACT</td><td>80K</td><td>62%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        DiffusionPolicy struggles with only 50 demos at 8% baseline, but RA-BC&rsquo;s frame weighting tripled
+        performance to 24%. ACT reaches 68% on its own &mdash; its 100-step action chunks already capture
+        long coherent segments, leaving less room for RA-BC to help.
+      </p>
+    </section>
+
+    <!-- Gallery -->
+    <section>
+      <h2 class="section-title">gallery</h2>
+      <div class="gallery-container">
+        <div class="image-container">
+          <img src="../assets/projects/packsarm/packsarm.png" alt="PackSARM results" class="project-image">
+          <p class="image-caption">SARM reward predictions and RA-BC training pipeline</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Takeaways -->
+    <section class="project-content">
+      <h2 class="section-title">key takeaways</h2>
+      <ul class="takeaways">
+        <li><strong>RA-BC works even on uniform data</strong> &mdash; 3&times; lift for DiffusionPolicy shows the progress signal is real</li>
+        <li><strong>Use &kappa;=0.01</strong> &mdash; aggressive filtering starves the model when data is limited</li>
+        <li><strong>ACT is stronger for bimanual tasks</strong> &mdash; action chunking and stable training make it reliable</li>
+        <li><strong>Biggest gains come with messier data</strong> &mdash; the method is built for quality filtering on mixed-quality demos</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <a href="../index.html" class="back-button">&larr; Back to Home</a>
+    </footer>
+  </div>
+</body>
+</html>

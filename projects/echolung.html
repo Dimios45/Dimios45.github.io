@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EchoLung &mdash; Cross-Anatomy Transfer Learning</title>
+  <link rel="stylesheet" href="../css/project-page.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-button">&larr; Home</a>
+
+    <header class="hero">
+      <h1 class="project-title">EchoLung</h1>
+      <p class="subtitle">Cross-Anatomy Transfer from Cardiac Echo to Lung Ultrasound</p>
+      <div class="hero-links">
+        <a href="https://github.com/Dimios45/echolung" target="_blank" class="hero-link">GitHub</a>
+        <a href="https://x.com/tirth_gada/status/2034308520015716581" target="_blank" class="hero-link">Twitter Post</a>
+      </div>
+    </header>
+
+    <!-- Overview -->
+    <section class="project-content">
+      <h2 class="section-title">overview</h2>
+      <p>
+        Lung ultrasound datasets are tiny (&lt;200 videos) while cardiac echo has 10K+ videos.
+        EchoLung demonstrates that self-supervised models pretrained on cardiac videos achieve
+        substantially better performance on downstream lung imaging tasks compared to random initialization.
+      </p>
+    </section>
+
+    <!-- Approach -->
+    <section class="project-content">
+      <h2 class="section-title">approach</h2>
+      <p>
+        Three-stage pipeline using <strong>V-JEPA2 ViT-L</strong> backbone:
+      </p>
+      <ul class="takeaways">
+        <li>Continued SSL pretraining on <strong>17,840</strong> unlabeled cardiac echo videos (EchoNet-Dynamic + EchoNet-Pediatric)</li>
+        <li>Freeze the backbone entirely</li>
+        <li>Train lightweight <strong>attentive probes</strong> for lung US classification tasks</li>
+      </ul>
+      <p>
+        The frozen cardiac representations transfer effectively despite the anatomical domain shift
+        between heart and lung ultrasound.
+      </p>
+    </section>
+
+    <!-- Results -->
+    <section class="project-content">
+      <h2 class="section-title">results</h2>
+      <div class="results-table">
+        <table>
+          <thead>
+            <tr><th>Task</th><th>Pretrained</th><th>Random Init</th><th>Gain</th></tr>
+          </thead>
+          <tbody>
+            <tr class="highlight"><td>POCUS 3-class</td><td>97.5% &plusmn; 2.3%</td><td>73.3%</td><td>+24.2pp</td></tr>
+            <tr class="highlight"><td>COVID-BLUES binary</td><td>75.2% &plusmn; 5.3%</td><td>63.3%</td><td>+11.9pp</td></tr>
+            <tr><td>Severity scoring</td><td>7.9%</td><td>&mdash;</td><td>Negative result</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Both gains are statistically significant (p &lt; 0.01) with Cohen&rsquo;s d &gt; 2.4.
+        Evaluated with 5-fold cross-validation, confusion matrices, AUC-ROC, Cohen&rsquo;s kappa, and MCC.
+      </p>
+    </section>
+
+    <!-- Gallery -->
+    <section>
+      <h2 class="section-title">gallery</h2>
+      <div class="gallery-container">
+        <div class="image-container">
+          <img src="../assets/projects/echolung/cv_pretrained_vs_randinit.png" alt="Pretrained vs Random Init comparison" class="project-image">
+          <p class="image-caption">Cross-validated pretrained vs. random initialization performance</p>
+        </div>
+        <div class="image-container">
+          <img src="../assets/projects/echolung/pocus_covid_sample.gif" alt="POCUS COVID sample" class="project-image">
+          <p class="image-caption">Sample POCUS lung ultrasound video used for classification</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Negative Result -->
+    <section class="project-content">
+      <h2 class="section-title">negative result</h2>
+      <p>
+        Severity classification achieved only 7.9% accuracy. The frozen cardiac representations
+        lack the granular B-line quantification patterns necessary for COVID severity scoring &mdash;
+        a useful finding for understanding representation transfer limitations.
+      </p>
+    </section>
+
+    <!-- Key Findings -->
+    <section class="project-content">
+      <h2 class="section-title">key findings</h2>
+      <ul class="takeaways">
+        <li><strong>Cross-anatomy transfer works</strong> &mdash; cardiac SSL representations generalize to lung US classification</li>
+        <li><strong>Few-shot viable</strong> &mdash; strong results with ~100 training videos per fold</li>
+        <li><strong>Task difficulty scales with granularity</strong> &mdash; binary &amp; 3-class succeed, fine-grained severity fails</li>
+        <li><strong>Pretrained checkpoints</strong> available on HuggingFace for community use</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <a href="../index.html" class="back-button">&larr; Back to Home</a>
+    </footer>
+  </div>
+</body>
+</html>
