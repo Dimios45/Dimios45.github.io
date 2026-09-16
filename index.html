@@ -3,159 +3,369 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tirth Gada</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Tirth Gada — Robot Learning</title>
+  <meta name="description" content="Tirth Gada — robot learning on real hardware: sim2real RL, visuotactile imitation learning, VR teleoperation and VLA fine-tuning. Electrical Engineering at VJTI Mumbai, research intern at HiRO Lab, IISc Bengaluru.">
+  <meta property="og:title" content="Tirth Gada — Robot Learning">
+  <meta property="og:description" content="Deploying policies on real hardware to find out which ones hold up, what they lack, and what makes them generalise.">
+  <meta property="og:image" content="https://dimios45.github.io/assets/home_page/profile_picture.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div class="container">
 
-    <pre class="ascii-banner">
-████████╗██╗██████╗ ████████╗██╗  ██╗
-╚══██╔══╝██║██╔══██╗╚══██╔══╝██║  ██║
-   ██║   ██║██████╔╝   ██║   ███████║
-   ██║   ██║██╔══██╗   ██║   ██╔══██║
-   ██║   ██║██║  ██║   ██║   ██║  ██║
-   ╚═╝   ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝
-    </pre>
+  <header class="site-header" id="header">
+    <div class="container">
+      <a class="brand" href="#">tirth gada<span class="dot">.</span></a>
+      <nav class="site-nav">
+        <a href="#journey">journey</a>
+        <a href="#projects">projects</a>
+        <a href="https://github.com/Dimios45" target="_blank" rel="noopener">github</a>
+        <a href="https://www.linkedin.com/in/tirth-gada-3600b0314/" target="_blank" rel="noopener" data-optional>linkedin</a>
+        <a href="https://x.com/tirth_gada" target="_blank" rel="noopener">twitter</a>
+      </nav>
+    </div>
+  </header>
 
-    <nav class="nav">
-      <a href="#about">about</a>
-      <a href="#projects">projects</a>
-      <a href="#contact">contact</a>
-    </nav>
+  <main>
 
-    <div class="divider"></div>
-
-    <section id="about" class="about">
-      <div class="about-content">
-        <div class="about-photo">
-          <img src="assets/home_page/profile_picture.png" alt="Tirth Gada">
-        </div>
-        <div class="about-text">
-          <h1>Tirth Gada</h1>
-          <p class="tagline">Electrical Engineering, VJTI Mumbai &mdash; 2nd Year</p>
-          <p class="bio">
-            Robot learning through reinforcement learning, sim2real transfer, and foundation models.
-            Experimenting and keeping pace with frontier robotics research.
-          </p>
-          <div class="social-links">
-            <a href="https://github.com/Dimios45" target="_blank" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
-            <a href="https://x.com/tirth_gada" target="_blank" aria-label="X / Twitter">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/tirth-gada-3600b0314/" target="_blank" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            </a>
-            <a href="mailto:tjgada_b24@ee.vjti.ac.in" aria-label="Email">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            </a>
+    <!-- ── hero ─────────────────────────────────────────── -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Hi, I'm <em>Tirth Gada.</em></h1>
+          <div class="hero-bio">
+            <p>
+              I'm a third-year electrical engineering student at VJTI Mumbai with a minor in robotics.
+              I've been working in robot learning for over a year, and what interests me is
+              <strong>deploying policies on real hardware</strong> to find out which ones hold up,
+              what they lack, and what makes them generalise.
+            </p>
+            <p>
+              I've chased that through sim-to-real RL for manipulation, tactile sensors I built for
+              visuotactile imitation learning, and Open Duck Mini, an open-source bipedal platform
+              running RL policies onboard.
+            </p>
+            <p>
+              I'm currently working on <strong>democratising the entire robot learning stack</strong> to develop
+              robot foundation models.
+            </p>
           </div>
         </div>
+        <figure class="hero-photo">
+          <img src="assets/home_page/profile_picture.png" alt="Tirth Gada standing in front of two Franka arms in the lab">
+        </figure>
       </div>
     </section>
 
-    <div class="divider"></div>
+    <!-- ── journey ──────────────────────────────────────── -->
+    <section class="section" id="journey">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-label">the journey so far</p>
+          <h2 class="section-title">One continuous thread: <em>train it, deploy it, see what breaks.</em></h2>
+        </div>
 
-    <section id="projects">
-      <h2 class="section-heading">projects</h2>
-      <div class="project-grid">
+        <div class="thread">
 
-        <a href="projects/rlffp.html" class="project-card">
-          <div class="project-thumb">
-            <img src="assets/projects/rlffp/ppo_simulation.gif" alt="RLFFP">
-          </div>
-          <div class="project-info">
-            <h3>RLFFP</h3>
-            <p>Robot Learning from First Principles &mdash; bridging simulation and reality with RL on the SO100 arm.</p>
-            <div class="project-tags">
-              <span>RL</span>
-              <span>Sim2Real</span>
-              <span>ManiSkill3</span>
+          <!-- 01 sim2real manipulation -->
+          <article class="chapter reveal">
+            <div class="chapter-mark">01</div>
+            <h3>I started with what felt like the toughest challenge out there: <em>sim2real.</em></h3>
+            <p>
+              Taking RL policies trained entirely in simulation and deploying them on real hardware.
+              Building on <a href="https://github.com/StoneT2000" target="_blank" rel="noopener">Stone Tao's</a> work,
+              I deployed sim2real cube picking with <strong>PPO</strong> on the SO-100 arm, then tested
+              <strong>FPO</strong> and <strong>FPO++</strong> against it on the same task.
+            </p>
+            <div class="media-row">
+              <figure style="--ar: 1.261">
+                <div class="media-box"><video data-src="assets/robot_learning/ppo_simulation.mp4" muted loop playsinline preload="none"></video></div>
+                <figcaption><strong>PPO in simulation</strong> — the SO-100 learning PickCube in ManiSkill.</figcaption>
+              </figure>
+              <figure style="--ar: 0.560">
+                <div class="media-box"><video data-src="assets/robot_learning/ppo_sim2real_cube_picking.mp4" muted loop playsinline preload="none"></video></div>
+                <figcaption><strong>Same policy, real arm</strong> — zero-shot cube picking.</figcaption>
+              </figure>
+              <figure style="--ar: 1.25">
+                <div class="media-box"><video data-src="assets/robot_learning/FPO++_maniskill_sim.mp4" muted loop playsinline preload="none"></video></div>
+                <figcaption><strong>FPO++ in ManiSkill</strong> — flow policy optimisation on the same task.</figcaption>
+              </figure>
             </div>
-            <div class="project-links">
-              <span class="link-pill" onclick="event.preventDefault(); window.open('https://github.com/Dimios45/rlffp', '_blank')">GitHub</span>
-              <span class="link-pill" onclick="event.preventDefault(); window.open('https://x.com/tirth_gada/status/2029903049175748733', '_blank')">Post</span>
-            </div>
-          </div>
-        </a>
+          </article>
 
-        <a href="projects/ducky.html" class="project-card">
-          <div class="project-thumb">
-            <img src="assets/projects/ducky/duck.jpg" alt="Ducky">
-          </div>
-          <div class="project-info">
-            <h3>Ducky</h3>
-            <p>Sim2real bipedal locomotion &mdash; training walking policies in simulation and deploying on hardware.</p>
-            <div class="project-tags">
-              <span>Sim2Real</span>
-              <span>Locomotion</span>
-              <span>RL</span>
+          <!-- 02 open duck mini -->
+          <article class="chapter reveal">
+            <div class="chapter-mark">02</div>
+            <h3>Then locomotion, so sim2real covered <em>both</em> ends.</h3>
+            <p>
+              I built <strong>Open Duck Mini</strong>, an open-source bipedal platform, and ran RL walking policies
+              onboard. Manipulation and locomotion, both trained in sim and both walking out into the real world.
+              A humanoid is manifesting soon.
+            </p>
+            <div class="media-row media-row--tall">
+              <figure style="--ar: 0.696">
+                <div class="media-box"><video data-src="assets/robot_learning/openduck_build.mp4" muted loop playsinline preload="none"></video></div>
+                <figcaption><strong>The build</strong> — assembling Open Duck Mini.</figcaption>
+              </figure>
+              <figure style="--ar: 0.562">
+                <div class="media-box"><video data-src="assets/robot_learning/duck_walking_sim2real.mp4" muted loop playsinline preload="none"></video></div>
+                <figcaption><strong>Sim2real walking</strong> — RL policy running on the duck.</figcaption>
+              </figure>
             </div>
-          </div>
-        </a>
+          </article>
 
-        <a class="project-card" href="projects/packsarm.html">
-          <div class="project-thumb">
-            <img src="assets/projects/packsarm/packsarm.png" alt="PackSARM">
-          </div>
-          <div class="project-info">
-            <h3>PackSARM</h3>
-            <p>Stage-aware reward modeling for ALOHA, ACT, and diffusion policies in manipulation tasks.</p>
-            <div class="project-tags">
-              <span>Reward Modeling</span>
-              <span>ACT</span>
-              <span>Diffusion</span>
+          <!-- 03 extracting value from robot data -->
+          <article class="chapter reveal">
+            <div class="chapter-mark">03</div>
+            <h3>Then I wanted to push the limits of <em>extracting value from robot data.</em></h3>
+            <p>
+              I tried out vision-only ACT, and worked on <strong>visuotactile policy learning</strong> using
+              <strong>FlexiTac</strong>, piezoresistive tactile sensors. I also deployed a <strong>B-spline diffusion policy</strong>
+              on the YAM arms using data collected with our VR teleop kit.
+            </p>
+            <div class="media-row">
+              <figure style="--ar: 0.561">
+                <div class="media-box"><video data-src="assets/robot_learning/behavioral-cloning_vision_only_ACT.mp4" muted loop playsinline preload="none"></video></div>
+                <figcaption><strong>Vision-only ACT</strong> — behaviour cloning from RGB alone.</figcaption>
+              </figure>
+              <figure style="--ar: 1.828">
+                <div class="media-box"><video data-src="assets/robot_learning/flexitac_tactile_act_deployed.mp4" muted loop playsinline preload="none"></video></div>
+                <figcaption><strong>Visuotactile ACT deployed</strong> — with our FlexiTac tactile sensor on the gripper.</figcaption>
+              </figure>
             </div>
-            <div class="project-links">
-              <span class="link-pill" onclick="event.preventDefault(); window.open('https://github.com/Dimios45/packsarm', '_blank')">GitHub</span>
-              <span class="link-pill" onclick="event.preventDefault(); window.open('https://x.com/tirth_gada/status/2027449660911288772', '_blank')">Post</span>
+            <div class="media-row">
+              <figure style="--ar: 0.563">
+                <div class="media-box"><video data-src="assets/robot_learning/flexitac_tactile_heatmap.mp4" muted loop playsinline preload="none"></video></div>
+                <figcaption><strong>Tactile heatmap</strong> — live readout from the sensor.</figcaption>
+              </figure>
+              <figure style="--ar: 1.333">
+                <div class="media-box"><video data-src="assets/robot_learning/bspline_dp_7dof_rollout_montage.mp4" muted loop playsinline preload="none"></video></div>
+                <figcaption><strong>B-spline diffusion policy rollouts</strong> — trained on VR teleop data.</figcaption>
+              </figure>
             </div>
-          </div>
-        </a>
+            <div class="media-row media-row--tall">
+              <figure style="--ar: 1.778">
+                <div class="media-box"><video data-src="assets/robot_learning/vr_cloth_folding_teleop_stack.mp4" muted loop playsinline preload="none"></video></div>
+                <figcaption>
+                  <strong>The VR teleop stack</strong> — episode 29 of bimanual towel folding: the operator (me lol), plus the top,
+                  left-wrist and right-wrist cameras the policy sees. Dataset on Hugging Face:
+                  <a href="https://huggingface.co/datasets/Dimios45/bimanual-fold-pink-towel-vr" target="_blank" rel="noopener">bimanual-fold-pink-towel-vr</a>.
+                </figcaption>
+              </figure>
+            </div>
+          </article>
 
-        <a class="project-card" href="projects/echolung.html">
-          <div class="project-thumb">
-            <img src="assets/projects/echolung/pocus_covid_sample.gif" alt="EchoLung">
-          </div>
-          <div class="project-info">
-            <h3>EchoLung</h3>
-            <p>Cross-anatomy transfer from heart to lung ultrasound data using JEPA architecture.</p>
-            <div class="project-tags">
-              <span>JEPA</span>
-              <span>Transfer Learning</span>
-              <span>Medical AI</span>
+          <!-- 04 now -->
+          <article class="chapter reveal is-now">
+            <div class="chapter-mark">04</div>
+            <h3>Now: <em>hill-climbing foundation models</em> with our own stack.</h3>
+            <p>
+              VR teleoperation on bimanual YAM arms for human-in-the-loop corrections, and fine-tuning VLAs
+              on what comes back. The question is still the same one I started with: what holds up on real hardware,
+              and what makes it generalise.
+            </p>
+            <div class="media-row media-row--tall">
+              <figure style="--ar: 1.774">
+                <div class="media-box"><video data-src="assets/robot_learning/yam_cloth_folding_bimanual.mp4" muted loop playsinline preload="none"></video></div>
+                <figcaption><strong>Bimanual cloth folding on the YAM arms</strong> — autonomous rollout.</figcaption>
+              </figure>
             </div>
-            <div class="project-links">
-              <span class="link-pill" onclick="event.preventDefault(); window.open('https://github.com/Dimios45/echolung', '_blank')">GitHub</span>
-              <span class="link-pill" onclick="event.preventDefault(); window.open('https://x.com/tirth_gada/status/2034308520015716581', '_blank')">Post</span>
-            </div>
-          </div>
-        </a>
+          </article>
 
+        </div>
       </div>
     </section>
 
-    <div class="divider"></div>
+    <!-- ── two things that steered me ───────────────────── -->
+    <section class="section" id="steered">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-label">two things that steered me here</p>
+          <h2 class="section-title">A robotics club, and a lab that <em>threw me in the deep end.</em></h2>
+        </div>
 
-    <section id="contact" class="contact">
-      <h2 class="section-heading">get in touch</h2>
-      <p class="contact-text">interested in robotics, RL, or sim2real? let's talk.</p>
-      <div class="contact-row">
-        <a href="mailto:tjgada_b24@ee.vjti.ac.in" class="contact-chip">email</a>
-        <a href="https://github.com/Dimios45" target="_blank" class="contact-chip">github</a>
-        <a href="https://x.com/tirth_gada" target="_blank" class="contact-chip">x / twitter</a>
-        <a href="https://www.linkedin.com/in/tirth-gada-3600b0314/" target="_blank" class="contact-chip">linkedin</a>
+        <div class="pillars">
+
+          <article class="pillar reveal">
+            <h3>SRA, VJTI's robotics club, <em>with my friends.</em></h3>
+            <p>
+              We taught <strong>Wall-E</strong>, a line-following and self-balancing robot, and <strong>MARIO</strong>,
+              a ROS 2-based manipulator, to 200+ first-years, trying to light the same spark that was lit in me
+              when I sat in those workshops in my own first year.
+            </p>
+            <p>
+              We also reached the finals of <strong>SIH 2025</strong>, India's largest hackathon, where we tried to find
+              the best possible way to test gold purity without invasive methods.
+            </p>
+            <div class="media-row">
+              <figure style="--ar: 0.911">
+                <div class="media-box"><video data-src="assets/robot_learning/self_balancing_walle.mp4" muted loop playsinline preload="none"></video></div>
+                <figcaption><strong>Wall-E</strong> — self-balancing.</figcaption>
+              </figure>
+              <figure style="--ar: 0.562">
+                <div class="media-box"><video data-src="assets/robot_learning/mario_ros2_workshop.mp4" muted loop playsinline preload="none"></video></div>
+                <figcaption><strong>MARIO</strong> — ROS 2 motor sweep at the workshop.</figcaption>
+              </figure>
+            </div>
+            <div class="media-row">
+              <figure style="--ar: 1.225">
+                <div class="media-box"><img src="assets/robot_learning/sih_2025_finalist_team.jpg" alt="SIH 2025 finalist team at IIT Kharagpur" loading="lazy"></div>
+                <figcaption><strong>SIH 2025 finals</strong> — the team at IIT Kharagpur.</figcaption>
+              </figure>
+              <figure style="--ar: 1.009">
+                <div class="media-box"><img src="assets/robot_learning/gold_testing_lsv.jpg" alt="Breadboard prototype for non-invasive gold purity testing" loading="lazy"></div>
+                <figcaption><strong>Gold purity testing</strong> — the non-invasive prototype.</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="pillar reveal">
+            <h3>HiRO Lab, IISc: <em>hammered into</em> research I had no prior knowledge of.</h3>
+            <p>
+              <strong>Learning from a single generated video demo</strong>, for which I had to optimise object and
+              hand tracking. And <strong>pretraining multi-embodiment grasping agents</strong> like Kinematics Flow
+              and GeoMatch.
+            </p>
+            <div class="media-row">
+              <figure style="--ar: 1.778">
+                <div class="media-box"><video data-src="assets/robot_learning/m3t_tracking.mp4" muted loop playsinline preload="none"></video></div>
+                <figcaption><strong>Object tracking</strong> — M3T on a handheld object.</figcaption>
+              </figure>
+            </div>
+            <div class="media-row">
+              <figure style="--ar: 0.561">
+                <div class="media-box"><video data-src="assets/robot_learning/render_overlay_hand_tracking.mp4" muted loop playsinline preload="none"></video></div>
+                <figcaption><strong>Hand tracking</strong> — mesh render overlay.</figcaption>
+              </figure>
+              <figure style="--ar: 0.561">
+                <div class="media-box"><video data-src="assets/robot_learning/flow_overlay_hand_tracking.mp4" muted loop playsinline preload="none"></video></div>
+                <figcaption><strong>Hand tracking</strong> — flow overlay.</figcaption>
+              </figure>
+              <figure style="--ar: 1">
+                <div class="media-box"><video data-src="assets/robot_learning/dexee_kinematics_flow.mp4" muted loop playsinline preload="none"></video></div>
+                <figcaption><strong>Kinematics Flow on DexEE</strong> — 86.1% grasp success rate.</figcaption>
+              </figure>
+            </div>
+          </article>
+
+        </div>
       </div>
     </section>
 
-    <footer>
-      <div class="divider"></div>
-      <p>&copy; 2025 Tirth Gada</p>
-    </footer>
+    <!-- ── projects ─────────────────────────────────────── -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-label">projects</p>
+          <h2 class="section-title">Write-ups, <em>with the details.</em></h2>
+        </div>
+        <ul class="project-list reveal">
+          <li>
+            <a href="projects/rlffp.html">
+              <span class="project-idx">01</span>
+              <span class="project-name">RLFFP</span>
+              <span class="project-brief">Robot learning from first principles: PPO vs FPO for sim2real cube picking on the SO-100.</span>
+              <span class="project-arrow">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="projects/ducky.html">
+              <span class="project-idx">02</span>
+              <span class="project-name">Ducky</span>
+              <span class="project-brief">Sim2real bipedal locomotion on Open Duck Mini.</span>
+              <span class="project-arrow">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="projects/packsarm.html">
+              <span class="project-idx">03</span>
+              <span class="project-name">PackSARM</span>
+              <span class="project-brief">Stage-aware reward modelling for ALOHA cube transfer with ACT and diffusion policy.</span>
+              <span class="project-arrow">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="projects/echolung.html">
+              <span class="project-idx">04</span>
+              <span class="project-name">EchoLung</span>
+              <span class="project-brief">Cross-anatomy transfer from cardiac echo to lung ultrasound with V-JEPA 2.</span>
+              <span class="project-arrow">→</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-  </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Tirth Gada · Mumbai</p>
+      <div class="footer-links">
+        <a href="mailto:tjgada_b24@ee.vjti.ac.in">email</a>
+        <a href="https://github.com/Dimios45" target="_blank" rel="noopener">github</a>
+        <a href="https://www.linkedin.com/in/tirth-gada-3600b0314/" target="_blank" rel="noopener">linkedin</a>
+        <a href="https://x.com/tirth_gada" target="_blank" rel="noopener">x</a>
+        <a href="cv_post_summer.pdf" target="_blank" rel="noopener">cv</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // header border once scrolled
+      var header = document.getElementById('header');
+      var onScroll = function () { header.classList.toggle('is-stuck', window.scrollY > 8); };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // reveal on scroll
+      var revealEls = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window && !reduce) {
+        var ro = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('is-in'); ro.unobserve(e.target); }
+          });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+        revealEls.forEach(function (el) { ro.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-in'); });
+      }
+
+      // videos: load lazily, play only while on screen, click to pause/resume
+      var videos = document.querySelectorAll('video[data-src]');
+      var load = function (v) {
+        if (!v.src) { v.src = v.dataset.src; v.load(); }
+      };
+      var play = function (v) {
+        if (v.dataset.paused === '1') return;
+        var p = v.play(); if (p && p.catch) p.catch(function () {});
+      };
+      if ('IntersectionObserver' in window) {
+        var vo = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            var v = e.target;
+            if (e.isIntersecting) { load(v); play(v); } else { v.pause(); }
+          });
+        }, { rootMargin: '200px 0px' });
+        videos.forEach(function (v) { vo.observe(v); });
+      } else {
+        videos.forEach(function (v) { load(v); play(v); });
+      }
+      videos.forEach(function (v) {
+        v.addEventListener('click', function () {
+          if (v.paused) { v.dataset.paused = '0'; play(v); }
+          else { v.dataset.paused = '1'; v.pause(); }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
